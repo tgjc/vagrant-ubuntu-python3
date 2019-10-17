@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
 
   # Prepare for vagrant package
   config.ssh.insert_key = false
-  config.vm.synced_folder ".", "/vagrant", type: "rsync", disabled: true
+  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
 
   config.vm.provision "shell", path: "bootstrap.sh", privileged: false
 end
